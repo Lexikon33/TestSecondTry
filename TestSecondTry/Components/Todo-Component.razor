@@ -11,19 +11,39 @@
 
 </div>
 
+<style>
+    ul {
+        list-style-type: none;
+    }
+</style>
+
 <div class="border_list">
     <ul>
 
         @foreach (var item in Items)
         {
-            <li>@item</li>
+            <li>
+
+                @item if ( )
+                {
+                <RadzenIcon Icon="checkmark" />
+                }
+                if else ()
+                {
+
+                }
+
+            </li>
         }
+
+        
 
     </ul>
 </div>
 
 
 @code {
+
     private string TextValue { get; set; } = "";
 
     private List<string> Items { get; set; }

@@ -85,7 +85,7 @@ a, .btn-link {
 
 .border_list {
     overflow-y: scroll;
-    border: solid #00ff00;
+    border: solid #000000;
     border-radius: 10px;
     width: 100%;
     height:700px;
