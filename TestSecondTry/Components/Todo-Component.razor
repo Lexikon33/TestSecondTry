@@ -3,7 +3,18 @@
 
 <h1 class="todo_main_class">Todo-List</h1>
 
-<div class="todo_main_class">
+
+
+
+
+
+
+
+
+
+
+ 
+<!--<div class="todo_main_class">
 
     <input type="text" value="@TextValue" @oninput="HandleInput" />
 
@@ -11,33 +22,37 @@
 
 </div>
 
+<div class="border_list">
+    <ul>
+@foreach (var item in Items)
+{
+            <li class="@((isChecked) ? "test" : "testsecond" )">
+
+                <input type="checkbox" @bind="@isChecked" /> @item
+
+            </li>
+}
+    </ul>
+</div>
+
 <style>
     ul {
         list-style-type: none;
     }
+
+    .test {
+        color: #ff0000;
+    }
+
+    .testsecond {
+        color: #00ff00;
+    }
+
 </style>
-
-<div class="border_list">
-    <ul>
-
-        @foreach (var item in Items)
-        {
-            <li>
-                @checkmark(@Items[@index])
-
-
-            </li>
-        }
-
-    </ul>
-</div>
-
 
 @code {
 
-
-
-    private int index { get; set; } = 0;
+    public bool isChecked { get; set; }
 
     private string TextValue { get; set; } = "";
 
@@ -45,55 +60,26 @@
 
     private void HandleInput(ChangeEventArgs e)
     {
-        TextValue = e.Value.ToString();
+    TextValue = e.Value.ToString();
     }
 
     protected override void OnInitialized()
     {
-        Items = new List<string>
-        { };
+    Items = new List<string>
+    {};
     }
 
     private void ButtonClick()
     {
-        if (TextValue != "")
-        {
-            Items.Add(TextValue);
-        }
-
-    }
-
-    RenderFragment checkmark(string text)
+    if (TextValue != "")
     {
-        bool input = true;
-
-
-        if (input == true)
-        {
-            return
-    @<li>
-        @text<RadzenIcon Icon="checkmark" />
-
-        <button onclick="@(() => {
-            input = false;
-
-            input = !input;
-
-        })"></button>
-
-    </li>;}
-        else
-        {
-            return
-    @<li>
-        @text<RadzenIcon Icon="stop" />
-        <button onclick="@(() => {
-            input = true;
-
-            input = !input;
-        })">
-        </button>
-    </li>;
-        }
+    Items.Add(TextValue);
     }
+
+    }
+
+
+
 }
+
+-->
