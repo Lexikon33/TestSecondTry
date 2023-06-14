@@ -1,0 +1,52 @@
+﻿@namespace todocomponent
+
+
+<h1 class="todo_main_class">Todo-List</h1>
+
+<div class="todo_main_class">
+
+    <input type="text" value="@TextValue" @oninput="HandleInput" />
+
+    <button @onclick="ButtonClick">Add to List.</button>
+
+</div>
+
+<div class="border_list">
+    <ul>
+
+        @foreach (var item in Items)
+        {
+            <li>@item</li>
+        }
+
+    </ul>
+</div>
+
+
+@code {
+    private string TextValue { get; set; } = "";
+
+    private List<string> Items { get; set; }
+
+    private void HandleInput(ChangeEventArgs e)
+    {
+        TextValue = e.Value.ToString();
+
+        Console.WriteLine(TextValue);
+    }
+
+    protected override void OnInitialized()
+    {
+        Items = new List<string>
+        {};
+    }
+
+    private void ButtonClick()
+    {
+        if (TextValue != "")
+        {
+            Items.Add(TextValue);
+        }
+       
+    }
+}

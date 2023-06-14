@@ -1,33 +1,37 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿<style>
+    .box{
+        font-size: 32px;
+    }
+</style>
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">TestSecondTry</a>
+        <a class="" href="">
+            <RadzenIcon class="box"  Icon="home"/>
+        </a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
 </div>
-
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
+        <div class="barborder">
+            <NavLink class="" href="">
+                <span class="bartext" aria-hidden="true"></span>
+                    <RadzenIcon  Icon="home"/><span>home</span>
             </NavLink>
         </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+        <div>
+            <NavLink class="" href="ToDo">
+                <RadzenIcon Icon="list" /><span class="">ToDo-List</span>
             </NavLink>
         </div>
     </nav>
 </div>
 
 @code {
+
     private bool collapseNavMenu = true;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;

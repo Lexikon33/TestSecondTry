@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZpWzk+X050TtFRoNflPhBlZrkYU8X8zg9pTljIOOT6DnPC2UIiOly1XU0PdYRysVP3AdkALqPHAztNdXyJMgaw==",
+  "dgSpecHash": "NYxFKnpt6MlqyNkVsaFTa+l+XE6PwkzgPIq4/Rl0LW/stotin5chGMaomaM+j8tWu8JeD8WG+MOdPMD50bg1ww==",
   "success": true,
   "projectFilePath": "C:\\Users\\Oleksii\\Desktop\\Github\\TestSecondTry\\TestSecondTry\\TestSecondTry.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Oleksii\\.nuget\\packages\\libsassbuilder\\2.0.1\\libsassbuilder.2.0.1.nupkg.sha512",
     "C:\\Users\\Oleksii\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.15\\microsoft.aspnetcore.authorization.6.0.15.nupkg.sha512",
     "C:\\Users\\Oleksii\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.15\\microsoft.aspnetcore.components.6.0.15.nupkg.sha512",
     "C:\\Users\\Oleksii\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.15\\microsoft.aspnetcore.components.analyzers.6.0.15.nupkg.sha512",
@@ -28,8 +29,10 @@
     "C:\\Users\\Oleksii\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\Oleksii\\.nuget\\packages\\microsoft.jsinterop\\6.0.15\\microsoft.jsinterop.6.0.15.nupkg.sha512",
     "C:\\Users\\Oleksii\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.15\\microsoft.jsinterop.webassembly.6.0.15.nupkg.sha512",
+    "C:\\Users\\Oleksii\\.nuget\\packages\\radzen.blazor\\4.13.1\\radzen.blazor.4.13.1.nupkg.sha512",
     "C:\\Users\\Oleksii\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\Oleksii\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
+    "C:\\Users\\Oleksii\\.nuget\\packages\\system.linq.dynamic.core\\1.2.22\\system.linq.dynamic.core.1.2.22.nupkg.sha512",
     "C:\\Users\\Oleksii\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Oleksii\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\Oleksii\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
