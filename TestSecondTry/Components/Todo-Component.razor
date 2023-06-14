@@ -23,26 +23,21 @@
         @foreach (var item in Items)
         {
             <li>
+                @checkmark(@Items[@index])
 
-                @item if ( )
-                {
-                <RadzenIcon Icon="checkmark" />
-                }
-                if else ()
-                {
-
-                }
 
             </li>
         }
-
-        
 
     </ul>
 </div>
 
 
 @code {
+
+
+
+    private int index { get; set; } = 0;
 
     private string TextValue { get; set; } = "";
 
@@ -51,14 +46,12 @@
     private void HandleInput(ChangeEventArgs e)
     {
         TextValue = e.Value.ToString();
-
-        Console.WriteLine(TextValue);
     }
 
     protected override void OnInitialized()
     {
         Items = new List<string>
-        {};
+        { };
     }
 
     private void ButtonClick()
@@ -67,6 +60,40 @@
         {
             Items.Add(TextValue);
         }
-       
+
+    }
+
+    RenderFragment checkmark(string text)
+    {
+        bool input = true;
+
+
+        if (input == true)
+        {
+            return
+    @<li>
+        @text<RadzenIcon Icon="checkmark" />
+
+        <button onclick="@(() => {
+            input = false;
+
+            input = !input;
+
+        })"></button>
+
+    </li>;}
+        else
+        {
+            return
+    @<li>
+        @text<RadzenIcon Icon="stop" />
+        <button onclick="@(() => {
+            input = true;
+
+            input = !input;
+        })">
+        </button>
+    </li>;
+        }
     }
 }
