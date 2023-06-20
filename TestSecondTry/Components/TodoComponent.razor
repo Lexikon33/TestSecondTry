@@ -1,0 +1,83 @@
+﻿@namespace todocomponent
+
+@using TestSecondTry.Service
+@using TestSecondTry.Model
+
+@inject TodoService todoService
+
+
+<h1 class="todo_main_class">Todo-List</h1>
+
+<div class="todo_main_class">
+
+    <input type="text" @bind-value="newTodoTitle" placeholder="Enter a new todo item" />
+
+    <button class="btn btn-primary" @onclick="AddTodoItem">Add</button>
+
+</div>
+
+<div class="border_todolist">
+
+    @if (todos.Count == 0)
+    {
+        <p>nope, you don't have humans rights</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var todo in todos)
+            {
+                <li>
+                    <input type="checkbox" @onclick="() => ToggleCompletion(todo.Id)" checked="@todo.IsCompleted" />
+
+                    <span class="todo.IsCompleted ? 'completed' : ''">
+
+                         @if (todo.IsCompleted == true)
+                        {
+                            <s>@todo.Title</s>
+                        }
+                        else
+                        {
+                         @todo.Title   
+                        }
+                        
+                    </span>
+                    <button class="btn btn-link" @onclick="() => RemoveTodoItem(todo.Id)"><RadzenIcon Icon="delete" /></button>
+                </li>
+            }
+        </ul>
+    }
+</div>
+
+@code {
+
+    private List<todo> todos;
+
+    private string? newTodoTitle;
+
+    protected override void OnInitialized()
+    {
+        todos = todoService.GetTodos();
+    }
+
+    private void AddTodoItem()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodoTitle))
+        {
+            todoService.AddTodo(new todo { Title = newTodoTitle });
+
+            newTodoTitle = string.Empty;
+        }
+    }
+
+    private void ToggleCompletion(int todoId)
+    {
+        todoService.ToggleTodoCompletion(todoId);
+    }
+
+    private void RemoveTodoItem(int todoId)
+    {
+        todoService.RemoveTodo(todoId);
+    }
+
+}

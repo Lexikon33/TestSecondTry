@@ -83,15 +83,21 @@ a, .btn-link {
     margin: 1em;
 }
 
-.border_list {
+.border_todolist {
     overflow-y: scroll;
     border: solid #000000;
     border-radius: 10px;
     width: 100%;
-    height:700px;
+    height: 360px;
+    padding: 15px;
+    box-shadow: 0px 4px 4px 3px rgba(155, 192, 255, 0.2);
 }
-
-under_line {
-    color: inherit; /* blue colors for links too */
-    text-decoration: inherit; /* no underline */
+.up{
+    align-content:start;
+}
+.down{
+    align-content:end;
+}
+.display{
+    display:flex;
 }
