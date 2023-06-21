@@ -5,7 +5,7 @@
     using TestSecondTry.Model;
 
     public class TodoService
-    { 
+    {
         private List<todo> todos = new List<todo>();
 
         public List<todo> GetTodos()
@@ -37,7 +37,7 @@
             {
                 todos.Remove(todo);
             }
-        }
+        }  
     }
         
 }

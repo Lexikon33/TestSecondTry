@@ -12,14 +12,14 @@
 
     <input class="inp_text" type="text" @bind-value="newTodoTitle" placeholder="Enter a new todo item" />
 
-    <button class="btn btn-primary" @onclick="AddTodoItem" >Add</button>
+    <button class="btn btn-primary" @onclick="AddTodoItem">Add</button>
 
 </div>
 
 <div class="border_todolist">
 
     @if (todos.Count == 0)
-    {
+    {#
         <p>nope, you don't have humans rights</p>
     }
     else
@@ -27,22 +27,29 @@
         <ul>
             @foreach (var todo in todos)
             {
-                <li class ="list">
-                    <span class = "custom_chack">
-                    <input class = "chack_original" type="checkbox" @onclick="() => ToggleCompletion(todo.Id)" checked="@todo.IsCompleted" />
-                        <span class = "chack_item"></span>
+                <li class="list">
+                    
+                    <span class="custom_chack">
+                        <input class="chack_original" type="checkbox" @onclick="() => ToggleCompletion(todo.Id)" checked="@todo.IsCompleted" />
+
+                        <span class="chack_item"></span>
+
                     </span>
+
                     <span class="todo.IsCompleted ? 'completed' : ''">
-                         @if (todo.IsCompleted == true)
+                        @if (todo.IsCompleted == true)
                         {
                             <s>@todo.Title</s>
                         }
                         else
                         {
-                         @todo.Title   
+                            @todo.Title
                         }
                     </span>
-                    <button class="btn btn-link" @onclick="() => RemoveTodoItem(todo.Id)"><RadzenIcon Icon="delete" /></button>
+
+                    <button class="btn btn-link" @onclick="() => RemoveTodoItem(todo.Id)">
+                        <RadzenIcon class="btntest" Icon="delete" />
+                    </button>
                 </li>
             }
         </ul>
@@ -79,5 +86,4 @@
     {
         todoService.RemoveTodo(todoId);
     }
-
 }
