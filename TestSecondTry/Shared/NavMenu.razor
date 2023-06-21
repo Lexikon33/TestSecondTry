@@ -16,17 +16,19 @@
 </div>
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
-        <div class="barborder">
-            <NavLink class="" href="">
+        <ul class = "list_main">
+            <li>
+                <NavLink class="" href="">
                 <span class="bartext" aria-hidden="true"></span>
                 <RadzenIcon Icon="home" /><span>home</span>
-            </NavLink>
-        </div>
-        <div>
-            <NavLink class="" href="ToDo">
+                </NavLink>
+            </li>
+            <li>
+                <NavLink class="" href="ToDo">
                 <RadzenIcon Icon="list" /><span class="">ToDo-List</span>
-            </NavLink>
-        </div>
+                </NavLink>
+            </li>
+        </ul>
     </nav>
 </div>
 

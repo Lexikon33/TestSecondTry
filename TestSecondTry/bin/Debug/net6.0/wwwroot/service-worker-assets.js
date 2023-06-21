@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-gjFiFl8G1Y\/rc\/ISu2BTt1HzWdzyBb3+s9Vubt7SqZI=",
+      "hash": "sha256-OMH+exXonRKEcgSgrbP9nFNu+WuWE+G9AwcKJMyW9Dw=",
       "url": "css\/app.css"
     },
     {
@@ -13,7 +13,7 @@
       "url": "css\/bootstrap\/bootstrap.min.css.map"
     },
     {
-      "hash": "sha256-jA4J4h\/k76zVxbFKEaWwFKJccmO0voOQ1DbUW+5YNlI=",
+      "hash": "sha256-+Q44zfEaCMmXduni5Td+IgCbk8sSUQwES2nWs+KKQz0=",
       "url": "css\/open-iconic\/FONT-LICENSE"
     },
     {
@@ -29,7 +29,7 @@
       "url": "css\/open-iconic\/font\/fonts\/open-iconic.otf"
     },
     {
-      "hash": "sha256-+P1oQ5jPzOVJGC52E1oxGXIXxxCyMlqy6A9cNxGYzVk=",
+      "hash": "sha256-oUpLdS+SoLJFwf4bzA3iKD7TCm66oLkTpAQlVJ2s1wc=",
       "url": "css\/open-iconic\/font\/fonts\/open-iconic.svg"
     },
     {
@@ -41,11 +41,11 @@
       "url": "css\/open-iconic\/font\/fonts\/open-iconic.woff"
     },
     {
-      "hash": "sha256-aF5g\/izareSj02F3MPSoTGNbcMBl9nmZKDe04zjU\/ss=",
+      "hash": "sha256-s\/Is6Ey6jfNAEfXUIOyHrXXX+RcA8hzchYnuOIWUMl4=",
       "url": "css\/open-iconic\/ICON-LICENSE"
     },
     {
-      "hash": "sha256-rDb1fXbrDo8\/dpt6Gi3UAobONVQv\/lE2bB7lGwRQ0jM=",
+      "hash": "sha256-5ToOztcPXlExcj3+\/PDkGs4F2+hgzAik0DU7AxPp2tc=",
       "url": "css\/open-iconic\/README.md"
     },
     {
@@ -61,15 +61,15 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-ccvqSVt0ax3FeS949FFlE7S4ZwWjAGA\/t9yv6ET8ttY=",
+      "hash": "sha256-arKt9xaDyLJqSSAwI\/ARV5aHeDiYsbibWLQ+BKlL3Vc=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-6VOIG1fZI7SQy9YXguDsnP52xw5MtwOjcEpg\/WiFa2A=",
+      "hash": "sha256-jFgjLHoOKTEtRooinkXbK9wVmJ5PuTiACn3v1XXqWUk=",
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-yzFf+O\/mlH+Q9klUSqXP2kxGKOUFLPxaww8da8fKhGU=",
+      "hash": "sha256-4Yh4OTT5TEAPNyXEzOG+n5l2HPK294WFItz4SIelj88=",
       "url": "sample-data\/weather.json"
     },
     {
@@ -841,7 +841,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-GT2gK+GjOisRXJY+9yh6H8s6K\/KDIsaFMFIgWvAnttY=",
+      "hash": "sha256-NoxotYO\/oGM2mdvZphjXqCME5fCDwyBIkfEe8e0Jx04=",
       "url": "_framework\/dotnet.6.0.16.8pit2mk5gz.js"
     },
     {
@@ -869,11 +869,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-mKoJykJnlHJRDuLdKB7tPSKAfC7aIGiaflYYR1fVwm0=",
+      "hash": "sha256-iZnvi4i2yG5EtN3MuG7ldOrTXX7VqtW0rs+Jf2WlwF4=",
       "url": "_framework\/TestSecondTry.dll"
     },
     {
-      "hash": "sha256-lUFAUGqZspOUamnt1uP9pQh7TTXftLz32cUxr4rgk+A=",
+      "hash": "sha256-tCLb2EY73\/BVMDemYCnfLgU39eIDjZamy7hTcqk+kmo=",
       "url": "_framework\/TestSecondTry.pdb"
     },
     {
@@ -881,7 +881,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-PanHE6UJb2GIbpo1qUzrh\/8zVmSMW7PYKxi6Rvjcv+M=",
+      "hash": "sha256-rg3pFrSuF3k\/ppRrVt70i2Bdf1TneHSu78oo\/Rx9H6w=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1017,5 +1017,5 @@
       "url": "_content\/Radzen.Blazor\/Radzen.Blazor.js"
     }
   ],
-  "version": "Bshv9jhD"
+  "version": "VNMRFOET"
 };
