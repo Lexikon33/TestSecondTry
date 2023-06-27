@@ -20,12 +20,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Components/NotesCompontent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xOb3Rlc0NvbXBvbnRlbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Components/TodoComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUb2RvQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Pages/Not.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Pages/ToDo.razor]

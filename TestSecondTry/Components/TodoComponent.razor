@@ -6,9 +6,9 @@
 @inject TodoService todoService
 
 
-<h1 class="todo_main_class">Todo-List</h1>
+<h1 class="main_class">Todo-List</h1>
 
-<div class="todo_main_class">
+<div class="main_class">
 
     <input class="inp_text" type="text" @bind-value="newTodoTitle" placeholder="Enter a new todo item" />
 
@@ -19,7 +19,7 @@
 <div class="border_todolist">
 
     @if (todos.Count == 0)
-    {#
+    {
         <p>nope, you don't have humans rights</p>
     }
     else
