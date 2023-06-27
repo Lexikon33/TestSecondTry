@@ -91,8 +91,8 @@ a, .btn-link {
 .border_todolist {
     outline: solid #000000;
     border-radius: 10px;
-    width: 100%;
-    height:40%;
+    width: 50%;
+    max-height: 500px;
     padding: 15px;
     box-shadow: 0px 4px 4px 3px rgba(155, 192, 255, 0.2);
     overflow: hidden;
@@ -124,6 +124,20 @@ a, .btn-link {
     align-items: center;
     list-style: none;
     justify-content: space-between;
+}
+
+.custom_line {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.custom_line::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: red;
 }
 
 .custom_chack {
@@ -168,21 +182,47 @@ a, .btn-link {
 
 .list_main
 {
+    display: flex;
     margin-top: 10px;
     padding-left: 10px;
+    align-items: center;
+    margin: 0;
+    padding: 15px;
+}
+
+.list_main > li:not(:last-child)
+{
+    margin-right: 20px;
 }
 
 .list_main > li {
+    position: relative;
     display: flex;
     align-items: center;
     list-style: none;
-    width: 100%;
+    width: 10%;
     height: 30px;
     background: #1861ac;
     border-radius: 10px;
     padding: 5px 5px;
     transition: 0.2s ease-in-out;
+    color: white;
 }
+
+    .list_main > li > i {
+        margin-right: 40px;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Chrome/Safari/Opera */
+        -khtml-user-select: none; /* Konqueror */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
+        transition: 0.3s ease-in-out;
+    }
+
+    .list_main > li:hover > i {
+        color: #26b050;
+    }
 
 .list_main > li:active
 {
@@ -196,18 +236,17 @@ a, .btn-link {
 
 .list_main > li > a
 {
+    position: absolute;
     text-decoration: none;
     color: white;
     display: flex;
     align-items: center;
     width: 100%;
     transition: 0.3s ease-in-out;
+    z-index: 2;
+    justify-content: center;
 }
 
-.list_main > li:first-child
-{
-    margin-bottom: 5px;
-}
 .rzi
 {
     margin: 0 5px 0 5px;
@@ -218,6 +257,7 @@ a, .btn-link {
     border: none;
     outline: 2px solid gray;
     margin-right: 10px;
+    padding: 0 0 0 10px;
 }
 .inp_text::placeholder
 {
@@ -229,4 +269,12 @@ a, .btn-link {
 }
 .btntest{
     color: #000000;
+}
+
+.content, px-4
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
