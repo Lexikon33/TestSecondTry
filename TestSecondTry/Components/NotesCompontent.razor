@@ -52,7 +52,7 @@
 
     public void Addgrab()
     {
-        if (newgradesTitle != null || !string.IsNullOrWhiteSpace(newsubjectTitle))
+        if (newgradesTitle != null && !string.IsNullOrWhiteSpace(newsubjectTitle))
         {
             GrabFunction.AddGrab(new grabmodel { grab = newgradesTitle, Text = newsubjectTitle });
 
@@ -61,5 +61,4 @@
             newsubjectTitle = String.Empty;
         }
     }
-
 }
