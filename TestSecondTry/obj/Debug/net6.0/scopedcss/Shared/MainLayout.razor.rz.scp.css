@@ -1,7 +1,7 @@
 .page[b-icq4esqgx5] {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
 }
 
 main[b-icq4esqgx5] {
@@ -56,10 +56,10 @@ main[b-icq4esqgx5] {
     }
 
     .sidebar[b-icq4esqgx5] {
-        width: 250px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
+        width: 100%;
+        min-height: 50px;
+        padding: 0;
+        margin: 0;
     }
 
     .top-row[b-icq4esqgx5] {

@@ -2,6 +2,7 @@
 
 @using TestSecondTry.Service
 @using TestSecondTry.Model
+@using Microsoft.JSInterop
 
 @inject TodoService todoService
 
@@ -36,10 +37,10 @@
 
                     </span>
 
-                    <span class="todo.IsCompleted ? 'completed' : ''">
+                    <span class="custom_line">
                         @if (todo.IsCompleted == true)
                         {
-                            <s>@todo.Title</s>
+                            
                         }
                         else
                         {
@@ -57,6 +58,14 @@
 </div>
 
 @code {
+
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+
+    private async Task CallJavaScriptFunction()
+    {
+        await JSRuntime.InvokeVoidAsync("line2");
+    }
 
     private List<todo> todos;
 

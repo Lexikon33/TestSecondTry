@@ -9,49 +9,49 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = TestSecondTry
 build_property.RootNamespace = TestSecondTry
-build_property.ProjectDir = C:\Users\Oleksii\Desktop\Github\TestSecondTry\TestSecondTry\
+build_property.ProjectDir = C:\Users\drozd\Desktop\lex_work\TestSecondTry\TestSecondTry\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Oleksii\Desktop\Github\TestSecondTry\TestSecondTry
+build_property.MSBuildProjectDirectory = C:\Users\drozd\Desktop\lex_work\TestSecondTry\TestSecondTry
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/App.razor]
+[C:/Users/drozd/Desktop/lex_work/TestSecondTry/TestSecondTry/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Components/NotesCompontent.razor]
+[C:/Users/drozd/Desktop/lex_work/TestSecondTry/TestSecondTry/Components/NotesCompontent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xOb3Rlc0NvbXBvbnRlbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Components/TodoComponent.razor]
+[C:/Users/drozd/Desktop/lex_work/TestSecondTry/TestSecondTry/Components/TodoComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUb2RvQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Pages/Index.razor]
+[C:/Users/drozd/Desktop/lex_work/TestSecondTry/TestSecondTry/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Pages/Not.razor]
+[C:/Users/drozd/Desktop/lex_work/TestSecondTry/TestSecondTry/Pages/Not.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Pages/ToDo.razor]
+[C:/Users/drozd/Desktop/lex_work/TestSecondTry/TestSecondTry/Pages/ToDo.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9Eby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Shared/SurveyPrompt.razor]
+[C:/Users/drozd/Desktop/lex_work/TestSecondTry/TestSecondTry/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/_Imports.razor]
+[C:/Users/drozd/Desktop/lex_work/TestSecondTry/TestSecondTry/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Shared/MainLayout.razor]
+[C:/Users/drozd/Desktop/lex_work/TestSecondTry/TestSecondTry/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-icq4esqgx5
 
-[C:/Users/Oleksii/Desktop/Github/TestSecondTry/TestSecondTry/Shared/NavMenu.razor]
+[C:/Users/drozd/Desktop/lex_work/TestSecondTry/TestSecondTry/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-zfmy0id83u
