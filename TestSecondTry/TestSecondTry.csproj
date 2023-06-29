@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="todo\NewFolder\**" />
+    <Content Remove="todo\NewFolder\**" />
+    <EmbeddedResource Remove="todo\NewFolder\**" />
+    <None Remove="todo\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Pages\Counter.razor" />
     <Content Remove="Pages\FetchData.razor" />
     <Content Remove="Pages\Notes.razor" />

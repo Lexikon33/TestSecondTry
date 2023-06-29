@@ -12,7 +12,7 @@
 <div class="main_class">
 
     <input class="inp_text" type="text" @bind-value="newTodoTitle" placeholder="Enter a new todo item" />
-
+    
     <button class="btn btn-primary" @onclick="AddTodoItem">Add</button>
 
 </div>
@@ -25,7 +25,8 @@
     }
     else
     {
-        <ul>
+        <ul>  
+
             @foreach (var todo in todos)
             {
                 <li class="list">
@@ -37,10 +38,10 @@
 
                     </span>
 
-                    <span class="custom_line">
+                    <span class="">
                         @if (todo.IsCompleted == true)
                         {
-                            
+                            <s>@todo.Title</s>
                         }
                         else
                         {
@@ -67,7 +68,7 @@
         await JSRuntime.InvokeVoidAsync("line2");
     }
 
-    private List<todo> todos;
+    private List<todo> todos; 
 
     private string? newTodoTitle;
 

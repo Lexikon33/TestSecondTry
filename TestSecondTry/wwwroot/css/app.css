@@ -278,3 +278,12 @@ a, .btn-link {
     align-items: center;
     justify-content: center;
 }
+
+#input_control {
+    padding: 8px;
+}
+
+.center{
+    display:flex;
+    justify-content: center;
+}

@@ -14,7 +14,7 @@
         }
 
         public void AddTodo(todo todo)
-        {
+        {       
             todo.Id = todos.Any() ? todos.Max(t => t.Id) + 1 : 1;
             todos.Add(todo);
         }

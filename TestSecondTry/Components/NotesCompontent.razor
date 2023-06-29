@@ -1,10 +1,65 @@
 ﻿@namespace NotesCompontent
 
-<h1 class="main_class">your grades</h1>
+@using TestSecondTry.grabes
+@using TestSecondTry.model
 
+<h1 class="main_class">Grades</h1>
 
+<div class="center">
+    <input class="inp_text" id="input_control" type="number" @bind-value="newgradesTitle" placeholder="Your grades" maxlength="100" />
 
+    <input class="inp_text" id="input_control" type="text" @bind-value="newsubjectTitle" placeholder="Enter your subject" />
+
+    <button class="btn btn-primary" @onclick="Addgrab">Add to list</button>
+</div>
+
+<div class="border_todolist">
+
+    @if (grab.Count == 0)
+    {
+        <p>! add now !</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var Grab in grab)
+            {
+                <li class="list">
+                    @Grab.grab
+                    @Grab.Text
+                </li>
+            }
+        </ul>
+    }
+
+</div>
 
 @code {
+
+    [Inject]
+    public grabfunction GrabFunction { get; set; } = null!;
+
+    private List<grabmodel> grab;
+
+    private int? newgradesTitle;
+
+    private string? newsubjectTitle;
+
+    protected override void OnInitialized()
+    {
+        grab = GrabFunction.reGrab();
+    }
+
+    public void Addgrab()
+    {
+        if (newgradesTitle != null || !string.IsNullOrWhiteSpace(newsubjectTitle))
+        {
+            GrabFunction.AddGrab(new grabmodel { grab = newgradesTitle, Text = newsubjectTitle });
+
+            newgradesTitle = null;
+
+            newsubjectTitle = String.Empty;
+        }
+    }
 
 }
