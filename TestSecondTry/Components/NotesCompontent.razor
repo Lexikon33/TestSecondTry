@@ -46,11 +46,10 @@
     }
 
 
-
 </div>
 
 <div class="border_todolist">
-
+                                                                                                                                                                                                                                                                                                                                                                                                            
     @if (grab.Count == 0)
     {
         <p>
@@ -64,7 +63,7 @@
             {
                 <li class="list">
                     @Grab.Text
-                    <div> <RadzenIcon Icon="note" />@Grab.grab</div>
+                    <p>Scores: @Grab.grab</p>
                     <button class="btn btn-primary" @onclick="() => Deletesystem(Grab.Id)"><RadzenIcon Icon="delete" /></button>
                 </li>
             }
@@ -73,6 +72,8 @@
 
 </div>
 
+@all
+
 @code {
 
     int selectedmin { get; set; } = 2;
@@ -80,6 +81,8 @@
     int selectedmax { get; set; } = 2;
 
     int selectedsoutput { get; set; } = 0;
+
+    private int all = 0;
 
     private bool system = true;                  
 
@@ -106,6 +109,8 @@
         if (!string.IsNullOrWhiteSpace(newsubjectTitle))
         {
             GrabFunction.AddGrab(new grabmodel { grab = selectedsoutput, Text = newsubjectTitle });
+
+            all += selectedsoutput;
 
             newsubjectTitle = String.Empty;
         }
