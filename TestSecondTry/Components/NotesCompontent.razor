@@ -2,22 +2,60 @@
 
 @using TestSecondTry.grabes
 @using TestSecondTry.model
+@using System.Collections.Generic
 
-<h1 class="main_class">Grades</h1>
+<h1 class="main_class">Scores</h1>
 
-<div class="center">
-    <input class="inp_text" id="input_control" type="number" @bind-value="newgradesTitle" placeholder="Your grades" maxlength="100" />
 
-    <input class="inp_text" id="input_control" type="text" @bind-value="newsubjectTitle" placeholder="Enter your subject" />
+<div class="center" id="center_grades">
 
-    <button class="btn btn-primary" @onclick="Addgrab">Add to list</button>
+    @if (system)
+    {
+        <select @bind="selectedmin">
+            @foreach (var number in numberListmin)
+            {
+                <option value="@number">@number</option>
+            }
+        </select>
+
+        <select @bind="selectedmax">
+            @foreach (var number in numberListmax)
+            {
+                <option value="@number">@number</option>
+            }
+        </select>
+
+        <button class="btn btn-primary" @onclick="Addsystem" >Make new system</button>
+    }
+    else
+    {
+
+        <input class="inp_text" id="input_control" type="text" @bind-value="newsubjectTitle" placeholder="Enter your subject" />
+
+        
+
+        <select @bind="selectedsoutput">
+            @foreach (var number in finalOutput)
+            {
+                <option value="@number">@number</option>
+            }
+        </select>
+
+        <button class="btn btn-primary" @onclick="Addgrab">Add to list</button>
+        
+    }
+
+
+
 </div>
 
 <div class="border_todolist">
 
     @if (grab.Count == 0)
     {
-        <p>! add now !</p>
+        <p>
+            Enter your Gredes System.
+        </p>
     }
     else
     {
@@ -25,8 +63,9 @@
             @foreach (var Grab in grab)
             {
                 <li class="list">
-                    @Grab.grab
                     @Grab.Text
+                    <div> <RadzenIcon Icon="note" />@Grab.grab</div>
+                    <button class="btn btn-primary" @onclick="() => Deletesystem(Grab.Id)"><RadzenIcon Icon="delete" /></button>
                 </li>
             }
         </ul>
@@ -36,12 +75,24 @@
 
 @code {
 
+    int selectedmin { get; set; } = 2;
+
+    int selectedmax { get; set; } = 2;
+
+    int selectedsoutput { get; set; } = 0;
+
+    private bool system = true;                  
+
+    List<int> numberListmin = new List<int> { 0, 1 };
+
+    List<int> numberListmax = new List<int> { 5, 6, 12, 15, 100 };
+
+    List<int> finalOutput = new List<int> { };
+
     [Inject]
     public grabfunction GrabFunction { get; set; } = null!;
 
     private List<grabmodel> grab;
-
-    private int? newgradesTitle;
 
     private string? newsubjectTitle;
 
@@ -52,13 +103,31 @@
 
     public void Addgrab()
     {
-        if (newgradesTitle != null && !string.IsNullOrWhiteSpace(newsubjectTitle))
+        if (!string.IsNullOrWhiteSpace(newsubjectTitle))
         {
-            GrabFunction.AddGrab(new grabmodel { grab = newgradesTitle, Text = newsubjectTitle });
-
-            newgradesTitle = null;
+            GrabFunction.AddGrab(new grabmodel { grab = selectedsoutput, Text = newsubjectTitle });
 
             newsubjectTitle = String.Empty;
         }
+    }
+
+    public void Addsystem()
+    {
+        if (selectedmin != 2 && selectedmax != 2)
+        {
+            while (selectedmin <= selectedmax)
+            {
+                finalOutput.Add(selectedmin);
+                ++selectedmin;
+            }
+            system = false;
+
+        }
+    }
+
+    public void Deletesystem(int id){
+
+
+        GrabFunction.DeleteGrab(id);
     }
 }

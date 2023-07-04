@@ -3,4 +3,4 @@
 // be reflected on the first load after each change).
 self.addEventListener('fetch', () => { });
 
-/* Manifest version: leXvtB2U */
+/* Manifest version: qqlfxiCI */

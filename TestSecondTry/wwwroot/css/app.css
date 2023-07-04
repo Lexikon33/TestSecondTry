@@ -280,10 +280,14 @@ a, .btn-link {
 }
 
 #input_control {
-    padding: 8px;
+    padding: 5px 20px 5px 20px;
 }
 
 .center{
     display:flex;
     justify-content: center;
+}
+
+#center_grades{
+    margin:10px;
 }

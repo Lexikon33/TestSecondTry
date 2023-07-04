@@ -1,6 +1,7 @@
 ﻿namespace TestSecondTry.grabes
 {
     using System.Collections.Generic;
+    using System.Security.AccessControl;
     using TestSecondTry.model;
 
     public class grabfunction
@@ -28,9 +29,11 @@
             }
         }
 
-        public void DeleteGrab(int id)
+        public void DeleteGrab(int grabId)
         {
-            grablist.RemoveAt(id);
+            var todo = grablist.FirstOrDefault(t => t.Id == grabId);
+
+            grablist.Remove(todo);            
         }
 
     }
