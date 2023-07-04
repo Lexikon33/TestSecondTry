@@ -13,9 +13,18 @@ a, .btn-link {
 }
 
 .btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
+    padding: 0;
+    margin: 0;
+
+    padding: 5px;
+    border-radius: unset;
 }
 
 .content {
@@ -77,26 +86,41 @@ a, .btn-link {
     justify-content:center;
 }
 
-.main_class{
-    display:flex;
+.main_class_main {
+    display: flex;
+    min-width: 50%;
     justify-content: center;
-    margin: 1em;
+    border-top: 3px solid #4a31ed;
+    border-left: 3px solid #4a31ed;
+    border-right: 3px solid #4a31ed;
+    padding: 20px 10px 10px 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 0 !important;
 }
 
-.todo_main_class > button
+.todo_main_class > .min_items > button
 {
     border-radius: 10px;
 }
 
 .border_todolist {
-    outline: solid #000000;
-    border-radius: 10px;
+    border-top: 1px solid #26b050;
+    border-bottom: 5px solid #4a31ed;
+    border-left: 3px solid #4a31ed;
+    border-right: 3px solid #4a31ed;
     width: 50%;
     max-height: 500px;
     padding: 15px;
-    box-shadow: 0px 4px 4px 3px rgba(155, 192, 255, 0.2);
     overflow: hidden;
     overflow-y: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+dl, ol, ul {
+    margin: 0 !important;
 }
 
 .border_todolist::-webkit-scrollbar {
@@ -253,10 +277,9 @@ a, .btn-link {
 }
 .inp_text
 {
-    border-radius: 10px;
+    height: 32px;
     border: none;
     outline: 2px solid gray;
-    margin-right: 10px;
     padding: 0 0 0 10px;
 }
 .inp_text::placeholder
@@ -283,11 +306,68 @@ a, .btn-link {
     padding: 5px 20px 5px 20px;
 }
 
-.center{
-    display:flex;
-    justify-content: center;
+.center {
+    position: relative;
+
+    min-width: 50%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid #4a31ed;
+    border-left: 3px solid #4a31ed;
+    border-right: 3px solid #4a31ed;
+    padding: 20px 10px 10px 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 0 !important;
 }
+
+    .center:before {
+        content: 'Min';
+        min-width: 70px;
+        height: 20px;
+        position: absolute;
+        z-index: 99;
+        top: 0;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .center:after {
+        content: 'Max';
+        min-width: 70px;
+        height: 20px;
+        position: absolute;
+        z-index: 99;
+        top: 0;
+        left: 42.5%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
 
 #center_grades{
     margin:10px;
+}
+
+.select1,
+.select2
+{
+    position: relative;
+    width: 70px;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+
+    border-radius: unset;
+}
+
+.main_items
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
 }

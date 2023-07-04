@@ -11,14 +11,14 @@
 
     @if (system)
     {
-        <select @bind="selectedmin">
+        <select class="select1" @bind="selectedmin">
             @foreach (var number in numberListmin)
             {
                 <option value="@number">@number</option>
             }
         </select>
 
-        <select @bind="selectedmax">
+        <select class="select2" @bind="selectedmax">
             @foreach (var number in numberListmax)
             {
                 <option value="@number">@number</option>
@@ -64,7 +64,7 @@
             {
                 <li class="list">
                     @Grab.Text
-                    <div> <RadzenIcon Icon="note" />@Grab.grab</div>
+                    <div>Score: @Grab.grab</div>
                     <button class="btn btn-primary" @onclick="() => Deletesystem(Grab.Id)"><RadzenIcon Icon="delete" /></button>
                 </li>
             }
