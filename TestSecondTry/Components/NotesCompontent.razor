@@ -11,14 +11,14 @@
 
     @if (system)
     {
-        <select @bind="selectedmin">
+        <select class="select1" @bind="selectedmin">
             @foreach (var number in numberListmin)
             {
                 <option value="@number">@number</option>
             }
         </select>
 
-        <select @bind="selectedmax">
+        <select class="select2" @bind="selectedmax">
             @foreach (var number in numberListmax)
             {
                 <option value="@number">@number</option>
