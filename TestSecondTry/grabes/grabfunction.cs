@@ -15,25 +15,16 @@
 
         public void AddGrab(grabmodel grabes)
         {
-            if (grablist != null)
-            {
-                grabes.Id  += 1;
+            grabes.Id = grablist.Any() ? grablist.Max(t => t.Id) + 1 : 1;
 
-                grablist.Add(grabes);
-            }
-            else
-            {
-                grabes.Id = 0;
-
-                grablist.Add(grabes);
-            }
+            grablist.Add(grabes);
         }
 
         public void DeleteGrab(int grabId)
         {
-            var todo = grablist.FirstOrDefault(t => t.Id == grabId);
-
-            grablist.Remove(todo);            
+            var grabs = grablist.FirstOrDefault(t => t.Id == grabId);
+            
+            grablist.Remove(grabs);            
         }
 
     }

@@ -25,14 +25,12 @@
             }
         </select>
 
-        <button class="btn btn-primary" @onclick="Addsystem" >Make new system</button>
+        <button class="btn btn-primary" id="btn_Style" @onclick="Addsystem">Make new system</button>
     }
     else
     {
 
         <input class="inp_text" id="input_control" type="text" @bind-value="newsubjectTitle" placeholder="Enter your subject" />
-
-        
 
         <select @bind="selectedsoutput">
             @foreach (var number in finalOutput)
@@ -41,19 +39,21 @@
             }
         </select>
 
-        <button class="btn btn-primary" @onclick="Addgrab">Add to list</button>
-        
+        <button class="btn btn-primary" id="btn_Style" @onclick="functionSystem"><RadzenIcon class="iconbtn" Icon="undo" /></button>
+
+        <button class="btn btn-primary" id="btn_Style" @onclick="Addgrab">Add to list</button>
+
     }
 
 
 </div>
 
 <div class="border_todolist">
-                                                                                                                                                                                                                                                                                                                                                                                                            
+
     @if (grab.Count == 0)
     {
         <p>
-            Enter your Gredes System.
+            Enter your Grades System.
         </p>
     }
     else
@@ -62,17 +62,21 @@
             @foreach (var Grab in grab)
             {
                 <li class="list">
-                    @Grab.Text
                     <p>Scores: @Grab.grab</p>
-                    <button class="btn btn-primary" @onclick="() => Deletesystem(Grab.Id)"><RadzenIcon Icon="delete" /></button>
+                    @Grab.Text
+                    <button class="btn btn-primary" id="btn_Style" @onclick="() => { Deletesystem(Grab.Id); updatedata(Grab.grab);}"><RadzenIcon class="iconbtn" Icon="delete" /></button>
                 </li>
             }
         </ul>
     }
+    <div class="system">
+        <p><RadzenIcon class="iconbtn" id="dark_icon" Icon="star" />Score: @all</p>
 
+        <p><RadzenIcon class="iconbtn" id="dark_icon" Icon="show_chart" />average: @average </p>
+
+        <p><RadzenIcon class="iconbtn" id="dark_icon" Icon="grading" /> Subjects: @subject</p>
+    </div>  
 </div>
-
-@all
 
 @code {
 
@@ -82,9 +86,13 @@
 
     int selectedsoutput { get; set; } = 0;
 
+    private bool system = true;
+
     private int all = 0;
 
-    private bool system = true;                  
+    private int subject = 0;
+
+    private double average;
 
     List<int> numberListmin = new List<int> { 0, 1 };
 
@@ -108,11 +116,33 @@
     {
         if (!string.IsNullOrWhiteSpace(newsubjectTitle))
         {
-            GrabFunction.AddGrab(new grabmodel { grab = selectedsoutput, Text = newsubjectTitle });
-
             all += selectedsoutput;
 
+            ++subject;
+
+            if (all != 0 && subject != 0)
+            {
+                average = all / subject;
+            }
+
+            GrabFunction.AddGrab(new grabmodel { grab = selectedsoutput, Text = newsubjectTitle });
+
             newsubjectTitle = String.Empty;
+        }
+    }
+
+    public void functionSystem()
+    {
+        system = true;
+
+        int count = finalOutput.Count;
+
+        int Lenght = count +1;
+
+        while (-1 != Lenght)
+        {
+            finalOutput.Remove(Lenght);
+            --Lenght;
         }
     }
 
@@ -130,9 +160,26 @@
         }
     }
 
-    public void Deletesystem(int id){
-
-
+    public void Deletesystem(int id)
+    {
         GrabFunction.DeleteGrab(id);
+
+    }
+
+    public void updatedata(int Score)
+    {
+        all -= Score;
+
+        --subject;
+
+        if (all != 0 && subject != 0)
+        {
+            average = all / subject;
+        }
+        else
+        {
+            average = 0;
+        }
+
     }
 }
